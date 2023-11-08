@@ -98,7 +98,7 @@ ifeq ($(SYSTEM),unix)
 -labsl_throw_delegate \
 -labsl_time \
 -labsl_time_zone
-  OR_TOOLS_LNK = $(PRE_LIB) $(ABSL_LNK) -lprotobuf -lglog -lgflags $(CBC_LNK) -lortools
+  OR_TOOLS_LNK = $(PRE_LIB) $(ABSL_LNK) -lprotobuf -lglog  $(CBC_LNK) -lortools
   OBJ_OUT = -o #
   EXE_OUT = -o #
   O = .o

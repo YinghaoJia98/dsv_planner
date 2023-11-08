@@ -36,7 +36,7 @@ target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${CMAKE_CURRENT_SOURCE
 cs_add_executable(octomap_manager
   src/octomap_manager_node.cc
 )
-target_link_libraries(octomap_manager ${PROJECT_NAME} ${catkin_LIBRARIES} ${CMAKE_CURRENT_SOURCE_DIR}/or-tools/lib/libglog.so ${PROJECT_SOURCE_DIR}/or-tools/lib/libgflags.so)
+target_link_libraries(octomap_manager ${PROJECT_NAME} ${catkin_LIBRARIES})
 
 # #########
 # EXPORT #
