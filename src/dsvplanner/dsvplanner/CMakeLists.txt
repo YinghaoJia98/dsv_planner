@@ -75,11 +75,11 @@ include_directories(
 # # Declare a C++ library
 add_library(dsvPlannerLib src/drrtp.cpp src/drrt.cpp src/dual_state_graph.cpp src/dual_state_frontier.cpp src/grid.cpp)
 add_dependencies(dsvPlannerLib ${${PROJECT_NAME}_EXPORTED_TARGETS})
-target_link_libraries(dsvPlannerLib ${catkin_LIBRARIES} ${OCTOMAP_LIBRARIES} glog)
+target_link_libraries(dsvPlannerLib ${catkin_LIBRARIES} ${OCTOMAP_LIBRARIES} /home/december/cmu_ws/src/dsv_planner/src/volumetric_mapping/octomap_world/or-tools/lib/libglog.so)
 
 # # Declare a C++ executable
 # # With catkin_make all packages are built within a single CMake context
 # # The recommended prefix ensures that target names across packages don't collide
 add_executable(${PROJECT_NAME} src/drrtp_node.cpp)
 add_dependencies(${PROJECT_NAME} ${${PROJECT_NAME}_EXPORTED_TARGETS})
-target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${OCTOMAP_LIBRARIES} dsvPlannerLib glog)
+target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${OCTOMAP_LIBRARIES} dsvPlannerLib /home/december/cmu_ws/src/dsv_planner/src/volumetric_mapping/octomap_world/or-tools/lib/libglog.so)
